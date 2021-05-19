@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<config>
+
+	<server>gm90</server>
+
+	<port>52311</port>
+
+	<besuser>IEMAdmin</besuser>
+
+	<!-- If the "bespassword" tag is present, it will use the value inside as
+
+	the password for the BigFix login. If it is not present, the program will
+
+	prompt the user to enter the password, but will not echo what is typed. -->
+
+	<bespassword>Tivoli01</bespassword>
+
+	<query></query>
+
+<actionsettingspattern><![CDATA[<?xml version="1.0" encoding="UTF-8"?>
+   <BES xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="BES.xsd">
+   <SourcedFixletAction>
+   <SourceFixlet>
+   <Sitename></Sitename>
+   <FixletID></FixletID>
+   <Action>Action1</Action>
+   </SourceFixlet>
+		<Settings>
+			<PreActionShowUI>false</PreActionShowUI>
+			<HasRunningMessage>false</HasRunningMessage>
+			<HasTimeRange>false</HasTimeRange>
+			<HasStartTime>false</HasStartTime>
+			<HasEndTime>false</HasEndTime>
+			<HasDayOfWeekConstraint>false</HasDayOfWeekConstraint>
+			<UseUTCTime>false</UseUTCTime>
+			<ActiveUserRequirement>NoRequirement</ActiveUserRequirement>
+			<ActiveUserType>AllUsers</ActiveUserType>
+			<HasWhose>false</HasWhose>
+			<PreActionCacheDownload>false</PreActionCacheDownload>
+			<Reapply>true</Reapply>
+			<HasReapplyLimit>false</HasReapplyLimit>
+			<HasReapplyInterval></HasReapplyInterval>
+			<HasRetry>true</HasRetry>
+			<RetryCount>999</RetryCount>
+			<RetryWait Behavior="WaitForInterval">PT30M</RetryWait>			
+			<HasTemporalDistribution>false</HasTemporalDistribution>
+			<ContinueOnErrors>true</ContinueOnErrors>
+			<PostActionBehavior Behavior="Nothing"></PostActionBehavior>
+			<IsOffer>false</IsOffer>
+		</Settings>
+   </SourcedFixletAction>
+   </BES>
+]]></actionsettingspattern>
+<inventorycputhreshold><![CDATA[<Parameter Name="cpuThresholdEnabled">true</Parameter>
+		<Parameter Name="cpuThresholdValue">55</Parameter> ]]></inventorycputhreshold>
+		
+<inventoryperiod><![CDATA[<HasTimeRange>true</HasTimeRange>
+			<TimeRange>
+				<StartTime>22:22:00</StartTime>
+				<EndTime>05:39:00</EndTime>
+			</TimeRange>]]></inventoryperiod>
+
+<inventorywhose><![CDATA[<HasWhose>true</HasWhose>
+			<Whose>
+				<Property>Date Inventaire obsolete</Property>
+				<Relation>matches</Relation>
+				<Value>True</Value>
+			</Whose>]]></inventorywhose>		
+			
+<inventorydayofweek><![CDATA[<HasDayOfWeekConstraint>true</HasDayOfWeekConstraint>
+			<DayOfWeekConstraint>
+				<Sun>true</Sun>
+				<Mon>true</Mon>
+				<Sat>true</Sat>
+			</DayOfWeekConstraint>]]></inventorydayofweek>
+</config>
+
