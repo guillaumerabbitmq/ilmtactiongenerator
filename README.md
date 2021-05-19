@@ -1,5 +1,5 @@
 # ilmtactiongenerator
-ilmtactiongenerator is a simple perl script to help ILMT user to update the ILMT actions required to run pertinent Software Inventory in order to produce acurate PVU reports.
+ilmtactiongenerator is a simple perl script to help ILMT user to update the ILMT actions required to run pertinent Software Inventory in order to produce acurate PVU reports. The test I run were with Strawberry perl.
 
 The perl script remove old actions before attempting to run new actions.
 It is provided as is.
