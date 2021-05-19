@@ -20,6 +20,7 @@ An XML file is provide to setup common parameters of actions to be run during th
 
 # How to run
 perl IlmtActionGenerator.pl config IlmtActionGeneratorgm7.xml
+
 Output:
 IBM BigFix ILMT Actions Generator
 Version 1.3
