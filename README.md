@@ -11,7 +11,7 @@ An XML file is provide to setup common parameters of actions to be run during th
  - Name of the user with rights to delete/run ILMT actions : "besuser"
  - The pasword of the user : "bespassword"
 
-# Special parameters (to be used with care !):
+# Special and optionnal parameters (to be used with care !):
  - The pattern of all actions is defined within "actionsettingspattern"
  - Threshold of the Inventory action : "inventorycputhreshold"
  - Inventory period of time to start : "inventoryperiod"
