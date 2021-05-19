@@ -20,7 +20,7 @@ use URI::Escape;
 use Getopt::Long;
 # use Log::Log4perl;
 
-print STDERR "IBM BigFix ILMT Actions Generator\n";
+print STDERR "IBM ILMT Actions Generator\n";
 print STDERR "Version 1.3\n";
 
 my $worksheet = undef;
@@ -176,21 +176,6 @@ sub suppressActiveAction {
 my $query = "(id of it) of bes actions whose ( id of source fixlet of it equals " . $FixletID . " and state of it equals \"Open\" and (id of site of source fixlet of it equals " . $siteID . " ))";
 my $resultActiveAction = queryRelevance ($query);
 
-
-# https://stackoverflow.com/questions/14841464/not-an-array-reference-when-using-perls-xmlsimple
-#if (ref($data->{Owner}) =~ /ARRAY/) {
-#    foreach my $e (@{$data->{Owner}}) {
-#         print $e->{OwnerId}->{OwnerCik}."\n";
-#         print $e->{OwnerId}->{OwnerName}."\n";
-#         print "\n";
-#    }
-#} else {
-#    print $data->{Owner}->{OwnerId}->{OwnerCik}."\n";
-#    print $data->{Owner}->{OwnerId}->{OwnerName}."\n";
-#}
-# ForceArray=>['Owner']
-#
-# Code a ajouter pour gérer la réponse unique ou la réponse multiple.
 
 my $comp = XMLin( $resultActiveAction->decoded_content , ForceArray=>['content']);
 #print Dumper($comp);
