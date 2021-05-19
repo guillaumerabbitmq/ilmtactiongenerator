@@ -14,7 +14,7 @@
 
 	prompt the user to enter the password, but will not echo what is typed. -->
 
-	<bespassword>Tivoli01</bespassword>
+	<bespassword>passwordOfTheUser</bespassword>
 
 	<query></query>
 
